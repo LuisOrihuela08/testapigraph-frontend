@@ -1,0 +1,46 @@
+<div class="container">
+    <div>
+        <h2>Crear una publicación</h2>
+    </div>
+    <div>
+        <form [formGroup]="postForm"  (ngSubmit)="createPost()">
+            <div class="form-group">
+              <label for="caption">Descripción:</label>
+              <textarea
+                id="caption"
+                formControlName="caption"
+                class="form-control"
+                rows="4"
+                required
+                ></textarea>
+              <div *ngIf="postForm.controls['caption'].invalid && postForm.controls['caption'].touched" class="text-danger">
+                  La descripción es obligatorio y se permite como máximo 2200 caracteres.
+                </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="image">Seleccionar imagen:</label>
+              <input
+                type="file"
+                id="imageName"
+                (change)="onImageSelected($event)"
+                class="form-control"
+                required
+              />
+            </div>
+            
+            <button type="submit" class="btn btn-primary" [disabled]="postForm.invalid || !imageFile">Crear publicación</button>
+          </form>
+    </div>
+    <div>
+      <div>
+        <h2>Compartir también: </h2>
+      </div>
+      <div class="content-redes">
+        <button (click)="shareToFacebook()"  class="btn btn-secondary">Facebook</button>
+        <button (click)="shareToInstagram()"  class="btn btn-secondary">Instagram</button>
+      </div>
+    </div>
+    
+  </div>
+  

@@ -1,0 +1,42 @@
+* {
+    /*Esto es una configuración global*/
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    /*Para separar las letras a extremos*/
+    align-items: center;
+    /*Para alinear las letras verticalmente 'y'*/
+    background-color: beige;
+    padding: 0.5%;
+}
+.titulo a{
+    display: flex;
+    font-family: Arial, sans-serif;
+    text-decoration: none; /* Eliminar subrayado de enlaces */
+    
+}
+.titulo h3{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.opciones {
+    padding-right: 2%;
+}
+
+.opciones a {
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color */
+}
+.opciones a:hover {
+    background-color: darkorange; /* Cambia el color de fondo al pasar el mouse */
+}
+button{
+    padding: 10px;
+}

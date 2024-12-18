@@ -1,0 +1,17 @@
+<div class="body">
+    <div>
+        <h1>Mis publicaciones</h1>
+    </div>
+    <div class="post-list" >
+        <div *ngFor = "let post of posts" class="card">
+            <img *ngIf="post.imageName" [src]="'http://localhost:8080' + post.imageName" alt="Imagen de {{post.imageName}}">
+            <div class="content">
+                <p>{{post.caption}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

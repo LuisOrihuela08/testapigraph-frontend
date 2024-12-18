@@ -1,0 +1,39 @@
+.body{
+    font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column; 
+      /*justify-content: center;*/
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+}
+.post-list {
+  display: flex;              
+  flex-wrap: wrap;            
+  justify-content: center;    
+  gap: 20px;                  
+  width: 100%;                
+  padding: 20px;
+}
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 600px;
+    text-align: center;
+  }
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  .card .content {
+    padding: 18px;
+  }
+  .card p {
+    margin: 10px 0 0;
+    color: #666;
+    font-size: 0.9em;
+    text-align: justify;
+  }
