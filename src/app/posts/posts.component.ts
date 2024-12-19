@@ -60,9 +60,13 @@ export class PostsComponent implements OnInit {
         //this.postForm.reset();
         this.imageFile = null;
 
-        //Para compartir en facebook
+        // Asignar la URL de la imagen obtenida del backend a `post.imageName`
+        const imageUrl = response.imageName; // La respuesta ya incluye la URL completa de la imagen
+
+        //Para compartir a las redes
         this.post.caption = this.postForm.value.caption;
-        this.post.imageName = `http://localhost:8080/api/post/imagen/${response.imageName}`; // URL completa de la imagen
+        this.post.imageName = imageUrl;
+        //this.post.imageName = `https://testapigraph-backend-production.up.railway.app/api/post/imagen/${response.imageName}`; // URL completa de la imagen
       },
       error: (err) => {
         console.error('Error al crear la publicación', err);
@@ -78,8 +82,8 @@ export class PostsComponent implements OnInit {
     }
     const post: Facebook = {
       message: String(this.post.caption),
-      url: 'https://img.freepik.com/foto-gratis/vista-superior-mesa-llena-comida_23-2149209253.jpg?t=st=1734491835~exp=1734495435~hmac=0db2f4f9c0b434965309ae2f13c4ebd54289773c8f2e219a86be6818c3d7d559&w=1380'
-      //url: String(this.post.imageName) 
+      //url: 'https://img.freepik.com/foto-gratis/vista-superior-mesa-llena-comida_23-2149209253.jpg?t=st=1734491835~exp=1734495435~hmac=0db2f4f9c0b434965309ae2f13c4ebd54289773c8f2e219a86be6818c3d7d559&w=1380'
+      url: String(this.post.imageName) 
     };
 
     this.socialMediaService.postFacebook(post).subscribe({
@@ -100,8 +104,8 @@ export class PostsComponent implements OnInit {
     }
     const post: Instagram = {
       caption : String(this.post.caption),
-      //image_url : String(this.post.imageName)
-      image_url : 'https://img.freepik.com/foto-gratis/vista-superior-mesa-llena-comida_23-2149209253.jpg?t=st=1734491835~exp=1734495435~hmac=0db2f4f9c0b434965309ae2f13c4ebd54289773c8f2e219a86be6818c3d7d559&w=1380'
+      image_url : String(this.post.imageName)
+      //image_url : 'https://img.freepik.com/foto-gratis/vista-superior-mesa-llena-comida_23-2149209253.jpg?t=st=1734491835~exp=1734495435~hmac=0db2f4f9c0b434965309ae2f13c4ebd54289773c8f2e219a86be6818c3d7d559&w=1380'
     };
     this.socialMediaService.postInstagram(post).subscribe({
       next: () => {
