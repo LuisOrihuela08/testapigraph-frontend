@@ -1,3 +1,67 @@
+<div class="landing-container">
+
+  <!-- Sección Hero -->
+  <section class="hero">
+    <h1>Bienvenido a <span class="brand">RicoSabor</span></h1>
+    <p>Descubre nuestros platos más deliciosos y ofertas imperdibles</p>
+  </section>
+
+  <!-- Sección de publicaciones (platos nuevos) -->
+  <section class="section">
+    <h2>🍽️ Nuestras Publicaciones</h2>
+    <div class="post-list">
+      <div *ngFor="let post of posts" class="card">
+        <img *ngIf="post.imageName" [src]="post.imageName" alt="Imagen de {{post.imageName}}">
+        <div class="content">
+          <p>{{post.caption}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de ofertas -->
+  <section class="section ofertas">
+    <h2>🔥 Ofertas Especiales</h2>
+    <div class="offer-list">
+      <div class="offer-card">
+        <h3>Combo Almuerzo</h3>
+        <p>Plato + bebida a solo S/ 12.90</p>
+      </div>
+      <div class="offer-card">
+        <h3>2x1 en hamburguesas</h3>
+        <p>Todos los viernes</p>
+      </div>
+      <div class="offer-card">
+        <h3>Ofertas en bebidas</h3>
+        <p>Todos los fines de semana</p>
+      </div>
+      <div class="offer-card">
+        <h3>Combo alitas BBQ</h3>
+        <p>Todos los Martes y Jueves</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección sobre nosotros -->
+  <section class="section about">
+    <h2>👨‍🍳 Sobre Nosotros</h2>
+    <p>Somos una cocina familiar con pasión por los sabores caseros. Cada plato es preparado con amor y los mejores
+      ingredientes.</p>
+  </section>
+  
+  <!-- Sección de ubicación -->
+  <div class="ubicacion">
+    <h2>📍 Ubícanos</h2>
+    <p>Av. Las Delicias 123, Lima, Perú</p>
+    <img src="https://static1.anpoimages.com/wordpress/wp-content/uploads/2022/07/googleMapsTricksHero.jpg?q=50&fit=crop&w=1140&h=&dpr=1.5" alt="Imagen del mapa">
+  </div>
+
+  
+
+</div>
+
+
+<!--
 <div class="body">
     <div>
         <h1>Mis publicaciones</h1>
@@ -11,7 +75,4 @@
         </div>
     </div>
 </div>
-
-
-
-
+-->

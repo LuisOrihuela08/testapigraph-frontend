@@ -33,6 +33,7 @@
     font-family: Arial, sans-serif;
     font-weight: bold; /* Texto en negrita */
     transition: background-color 0.3s ease; /* Suaviza el cambio de color */
+    text-decoration: none;
 }
 .opciones a:hover {
     background-color: darkorange; /* Cambia el color de fondo al pasar el mouse */
