@@ -57,6 +57,7 @@ export class PostsComponent implements OnInit {
     this.postService.createpost(formData).subscribe({
       next: (response) => {
         alert('Publicación creada con éxito');
+        console.log('Publicación creada', response);
         //this.postForm.reset();
         this.imageFile = null;
 
@@ -89,6 +90,7 @@ export class PostsComponent implements OnInit {
     this.socialMediaService.postFacebook(post).subscribe({
       next: () => {
         alert('Publicación compartida en Facebook con éxito');
+        console.log('Publicación compartida en Facebook');
       },
       error: (err) => {
         console.error('Error compartiendo en Facebook:', err);
@@ -110,6 +112,7 @@ export class PostsComponent implements OnInit {
     this.socialMediaService.postInstagram(post).subscribe({
       next: () => {
         alert('Publicación compartida en Instagram con éxito');
+        console.log('Publicación compartida en Instagram');
       },
       error: (err) => {
         console.error('Error compartiendo en Instagram', err);

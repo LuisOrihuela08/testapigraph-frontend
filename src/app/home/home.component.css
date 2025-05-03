@@ -39,95 +39,121 @@
   }
   */
 
-  .landing-container {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #fff8f0;
-    color: #333;
-    padding: 0 1.5rem;
-  }
-  
-  .hero {
-    text-align: center;
-    padding: 3rem 1rem;
-    background: url('https://alba-pe-atv.cdn.mediatiquepress.com/wp-content/uploads/2024/08/WhatsApp-Image-2024-08-07-at-10.10.54-AM-1024x563.jpeg') no-repeat center center/cover;
-    color: #ff9800;
-    border-radius: 12px;
-  }
-  .hero h1{
-    font-size: 3rem;
-    font-weight: bold;
-    text-shadow: #333 0px 0px 10px;
-  }
+.landing-container {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff8f0;
+  color: #333;
+  padding: 0 1.5rem;
+}
 
-  .hero p{
-    font-size: 1.2rem;
-    margin-top: -25px;
-    font-weight: bold;
-    text-shadow: #333 0px 0px 10px;
-  }
-  
-  .hero .brand {
-    color: #ff9800;
-    font-weight: bold;
-    text-shadow: #333 0px 0px 10px;
-  }
-  
-  .section {
-    margin-top: 2rem;
-  }
-  
-  h2 {
-    border-left: 5px solid #ff9800;
-    padding-left: 10px;
-    color: #444;
-  }
-  
-  .post-list, .offer-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
-    margin-top: 1rem;
-  }
-  
-  .card, .offer-card {
-    background: white;
-    border-radius: 12px;
-    padding: 1rem;
-    width: 300px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
-  }
-  
-  .card:hover, .offer-card:hover {
-    transform: scale(1.03);
-  }
-  
-  .card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 12px;
-  }
-  
-  .content p {
-    margin-top: 0.5rem;
-    font-size: 1rem;
-  }
-  
-  .ofertas .offer-card {
-    background-color: #fff3e0;
-    border-left: 4px solid #ff9800;
-  }
-  
-  .ubicacion iframe {
-    border-radius: 8px;
-    margin-top: 0.5rem;
-  }
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: url('https://alba-pe-atv.cdn.mediatiquepress.com/wp-content/uploads/2024/08/WhatsApp-Image-2024-08-07-at-10.10.54-AM-1024x563.jpeg') no-repeat center center/cover;
+  color: #ff9800;
+  border-radius: 12px;
+}
 
-  .ubicacion img{
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 12px;
-  }
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: #333 0px 0px 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: -25px;
+  font-weight: bold;
+  text-shadow: #333 0px 0px 10px;
+}
+
+.hero .brand {
+  color: #ff9800;
+  font-weight: bold;
+  text-shadow: #333 0px 0px 10px;
+}
+
+.section {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+h2 {
+  border-left: 5px solid #ff9800;
+  padding-left: 10px;
+  color: #444;
+}
+
+.post-list,
+.offer-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.post-list .card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  text-align: justify;
+
+}
+
+.post-list .card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.post-list .caption-text {
+  white-space: pre-wrap;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+.offer-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.offer-card:hover {
+  transform: scale(1.03);
+}
+
+
+
+.content p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.ofertas .offer-card {
+  background-color: #fff3e0;
+  border-left: 4px solid #ff9800;
+}
+
+.ubicacion iframe {
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+.ubicacion img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}

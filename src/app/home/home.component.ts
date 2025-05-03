@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit{
     this.postService.getpost().subscribe(
       (data: Post[]) => {
         this.posts = data;
+        console.log('Publicaciones cargadas', this.posts);
       },
       (error) => {
         console.error('Error al cargar las publicaciones', error);

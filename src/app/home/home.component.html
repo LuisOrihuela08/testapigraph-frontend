@@ -13,7 +13,8 @@
       <div *ngFor="let post of posts" class="card">
         <img *ngIf="post.imageName" [src]="post.imageName" alt="Imagen de {{post.imageName}}">
         <div class="content">
-          <p>{{post.caption}}</p>
+          <!--<p>{{post.caption}}</p>-->
+          <pre class="caption-text">{{ post.caption }}</pre>
         </div>
       </div>
     </div>
